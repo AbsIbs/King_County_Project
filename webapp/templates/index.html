@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/script.js" defer></script>
     <title>House Predictor</title>
 </head>
 <body>
@@ -14,15 +15,12 @@
                 <div>
                     <img src="../static/img/apostophe.png" style="width: 3vw;">
                 </div>
-                <div style="font-size: 6.5rem; font-weight: bold; color: white;">
-                    Make a 
-                    <br>
-                    Dream.
-                    <div style="font-size: 1rem; color: whitesmoke; font-weight: normal; margin-top: 1rem; border-left: 0.1rem white solid; padding-left: 2rem; line-height: 200%">
-                        'I cannot emphasise how incredibly useful this tool has been! My wife and I have been planning on a massive renovation for our old home. 
-                        This has made it so easy for us to accurately budget all aspects of our house.'
+                <div style="font-size: 6rem; font-weight: bold; color: white;">
+                    Welcome to Zen
+                    <div style="margin-bottom: 1rem; color: white; font-size: 1rem; font-weight: normal; line-height: 200%">
+                        Based on a <span style="font-weight: bold;">Logistic Regression</span> algorithm, Zen is a powerful tool that utilizes machine learning to accurately estimate the price of a home.
                     </div>
-                    <div style="display: flex; padding-left: 2rem; align-items: center; margin-top: 1rem;">
+                    <div style="display: flex; align-items: center;">
                         <img src="../static/img/user.png" style="width: 2.5vw; object-fit: cover; height: 2.5vw; padding-top: 1rem;">
                         <div style="font-size: 1rem; padding-top: 1rem; padding-left: 1rem;">
                             Sofia Valentina
@@ -32,12 +30,162 @@
                             </span>
                         </div>
                     </div>
+                    <div style="margin-left: 2rem; font-size: 1rem; color: whitesmoke; font-weight: normal; margin-top: 1.5rem; border-left: 0.1rem white solid; padding-left: 2rem; line-height: 200%">
+                        'I cannot emphasise how incredibly useful this tool has been!
+                        This has made it so easy for us to accurately budget all aspects of our house.'
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="flex: 1; background-color: white">
-            
+        <div style="flex: 1; background-color: white; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <form action="#" class="form">
+                <div style="border-top: 1px #ccc solid; border-bottom: 1px #ccc solid; padding: 0.75rem;">
+                    <div class="container">
+                        <section id="p1">
+                            <div class="input-group">
+                                <label for="floors">Number of floors</label>
+                                <select id="floors" name="floors" aria-label="floors">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="bedrooms">Number of bedrooms</label>
+                                <select id="bedrooms" name="bedrooms" aria-label="bedrooms">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="bathrooms">Number of bathrooms</label>
+                                <select id="bathrooms" name="bathrooms" aria-label="bathrooms">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </div>
+                            <div style="display: flex; justify-content: center;">
+                                <a href="#p2" class="btn" style="width: 50%;">
+                                    Next
+                                </a>
+                            </div>
+                        </section>
+                        <section id="p2">
+                            <div class="input-group">
+                                <label for="condition">Condition</label>
+                                <select id="condition" name="condition" aria-label="condition">
+                                    <option value="1">Poor</option>
+                                    <option value="2">Fair</option>
+                                    <option value="3">Average</option>
+                                    <option value="4">Good</option>
+                                    <option value="5">Very Good</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="grade">Grade</label>
+                                <select id="grade" name="grade" aria-label="grade">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="income">Average Income in Area ($)</label>
+                                <input type="number" id="income" name="income" style="width: 95%;">
+                            </div>
+                            <div style="display: flex; gap: 1rem">
+                                <a href="#p1" class="btn" style="flex: 1; background-color: #ccc; color: black;">
+                                    Prev
+                                </a>
+                                <a href="#p3" class="btn" style="flex: 1;">
+                                    Next
+                                </a>
+                            </div>
+                        </section>
+                        <section id="p3">
+                            <div class="input-group">
+                                <label for="sqftLiving">Living Space (square ft)</label>
+                                <input type="number" id="sqftLiving" name="sqftLiving" style="width: 95%;">
+                            </div>
+                            <div class="input-group">
+                                <label for="sqftLot">Lot Space (square ft)</label>
+                                <input type="number" id="sqftLot" name="sqftLot" style="width: 95%;">
+                            </div>
+                            <div class="input-group">
+                                <label for="redmondDist">Distance to Redmond (km)</label>
+                                <input type="number" id="redmondDist" name="redmondDist" style="width: 95%;">
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <a href="#p2" class="btn" style="flex: 1; background-color: #ccc; color: black;">
+                                    Prev
+                                </a>
+                                <button type="button" class="btn btn-primary" style="flex: 1; background-color: green; color: white; border: 0px; border-radius: 0.25rem; font-weight: normal;" onclick="predictPrice();">
+                                    Predict
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div style="border:#ccc solid 1px; width: 100%; border-radius: 0.25rem; height: 3rem; font-size: 1.5rem; color: #1F28EB; margin-top: 2rem; display: flex; font-weight: bold">
+                    <div style="background-color: #1F28EB; width: 5rem; display: flex; justify-content: center; align-items: center;">
+                        <img src="../static/img/calculator.png" style="height: 2rem;">
+                    </div>
+                    <span style="padding-left: 1rem; display: flex; align-items: center;">$
+                        <span id="predictedPrice"> -</span>
+                    </span>
+                </div>
+                <div style="display: flex; gap: 1rem; height: 4rem; margin-top: 2rem;">
+                    <a href="https://github.com/AbsIbs/King_County_Project" target="_blank" style="display: flex; align-items: center; justify-content: center; flex: 1">
+                        <img src="../static/img/view_on_github.png" style="width: 75%">
+                    </a>
+                    <a href="https://www.linkedin.com/in/abass-ibrahim/" target="_blank" style="display: flex; align-items: center; justify-content: center; flex: 1">
+                        <img src="../static/img/view_on_linkedin.png" style="width: 75%">
+                    </a> 
+                </div>
+            </form>
         </div>
     </div>
 </body>
+<script>
+    function predictPrice() {
+        let constant = 5.7385
+        let income = document.getElementById('income').value
+        let sqftLiving = document.getElementById('sqftLiving').value
+        let sqftLot = document.getElementById('sqftLot').value
+        let redmondDist = document.getElementById('redmondDist').value
+        let bedrooms = document.getElementById('bedrooms').value
+        let floors = document.getElementById('floors').value
+        let bathrooms = document.getElementById('bathrooms').value
+        let condition = document.getElementById('condition').value
+        let grade = document.getElementById('grade').value
+        
+        let floorArea = sqftLiving / sqftLot
+        let averageRoomSize = sqftLiving / (bathrooms + bedrooms)
+
+        let predictedPrice = Math.round(
+            Math.exp(
+            constant + (0.3831*Math.log(income)) + (-0.1891*Math.log(sqftLiving)) + (-0.1621*Math.log(redmondDist)) + (0.5412*Math.log(averageRoomSize)) + (0.1171*Math.log(floorArea)) + (0.1555*bedrooms) + (-0.0229*floors) + (0.0782*condition) + (0.1026*grade) + (0.1228*bathrooms) 
+            )
+        )
+        document.getElementById('predictedPrice').innerHTML = predictedPrice
+    }
+</script>
 </html>

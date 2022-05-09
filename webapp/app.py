@@ -1,7 +1,4 @@
-from flask import Flask, render_template, request, jsonify
-import numpy as np
-import pandas as pd
-import pickle
+from flask import Flask, render_template
 
 app = Flask(__name__)
 

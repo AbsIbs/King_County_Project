@@ -19,3 +19,65 @@ body {
                 0 16px 32px rgba(0,0,0,0.07), 
                 0 32px 64px rgba(0,0,0,0.07);
 }
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type:x mandatory;
+    
+}
+
+section {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+section > div {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+input, label {
+    display: block;
+}
+
+form {
+    padding: 1rem;
+    width: 30vw;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: grey;
+    font-weight: bold;
+}
+
+form label {
+    text-align: left;
+}
+
+select {
+    padding: 0.8rem 0.8rem;
+    width: 100%;
+}
+
+input {
+    padding: 0.8rem 0.8rem;
+}
+
+.btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: #1F28EB;
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+}
