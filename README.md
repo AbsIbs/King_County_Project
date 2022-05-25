@@ -46,14 +46,15 @@ Examining the distributions of features revealed a large amount of missing value
 <br><br>
 ![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/initial_distributions.png)
 <br><br>
-The data distributions also show many features with **outliers** e.g.,
+The data distributions also show many features with **outliers** e.g.
 - **price**
 - **bedrooms**
 - **sqft_living**
 
 Once the data had been cleaned, the dataset was split into 2 parts. One part holds property values below **$1mil** and the rest is everything above that value.
 This was done to make the price distributions for both of the target variables normally distributed.
-![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/house_price distributions.png)
+<br><br>
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/house_price_distributions.png)
 
 ### Feature Engineering
 #### Feature engineering from the dataset
@@ -76,9 +77,19 @@ high_prices_df['bedroom_bathroom_ratio'] = high_prices_df['bathrooms'] / high_pr
 ```
 
 #### Web scraped data from [UnitedStatesZipcodes](www.UnitedStatesZipCodes.org)
+For each zipcode, we retrieve data from this list of items.
+<br><br>
+```python
+['population', 'land_area', 'pop_density', 'water_area', 'income', 'nearby_schools']
+```
 
+Finally, we can view a heatmap of all of our features.
+<br><br>
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/heatmap.png)
 
-
+In addition, when utilising the data gained from web scraping and longitude & latitude, we can visualise the house price with respect to location.
+<br><br>
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/price_maps.png)
 
 ## Modelling
 The regression algorithms used are:
@@ -88,6 +99,31 @@ The regression algorithms used are:
 >Histogram Gradient Boosting
 
 ## Model Performance
+To record our model performance, we'll use 2 metrics:
+- **R2**
+- **RMSE**
+
+### Low Housing Prices (=< $1mil)
+#### **Predictive Modelling**
+
+
+
+#### **Inferential Modelling**
+
+
+
+
+
+### High Housing Prices (> $1mil)
+#### **Inferential Modelling**
+
+
+
+
+#### **Predictive Modelling** 
+
+
+## Results
 
 ## Limitations
 
