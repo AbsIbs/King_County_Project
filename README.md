@@ -36,16 +36,18 @@ pip: -r requirements.txt
 ```
 
 ## Demo and Usage
-The project has been summarized in the form of a **house prediction webapp** where users can select values from a host of features and retrieve the predicted house price.
+The project has been summarized in the form of a **house prediction** <a href="https://kc-house-predictor.herokuapp.com/">webapp</a> where users can select values from a host of features and retrieve the predicted house price.
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/kc_county_project_image.png)
 
 ## Dataset
 - The dataset comes from the King County Assessor's public website, which lists house sale prices and other data for over 21,000 houses in the period from May 2014 - May 2015.
 - Source: **King County Assessor's public website**
 - Over 21,000 houses
 - Period: **May 2014 - May 2015**
-- Additional fetures: webscraped data from **UnitedStatesZipCodes.org**
+- Additional fetures: webscraped data from **www.UnitedStatesZipCodes.org**
 
 ## Exploratory Data Analysis
+
 
 ## Model Performance
 
