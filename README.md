@@ -51,17 +51,33 @@ The data distributions also show many features with **outliers** e.g.,
 - **bedrooms**
 - **sqft_living**
 
+Once the data had been cleaned, the dataset was split into 2 parts. One part holds property values below **$1mil** and the rest is everything above that value.
+This was done to make the price distributions for both of the target variables normally distributed.
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/house_price distributions.png)
+
 ### Feature Engineering
 #### Feature engineering from the dataset
 Focused mainly on ratios and the distance between the house and major cities i.e. **Seattle and Redmond**
 <br><br>
+Example
+```python
+# average room size
+low_prices_df['average_room_size'] = low_prices_df['sqft_living'] / (low_prices_df['bathrooms'] + low_prices_df['bedrooms'])
 
+# floor area ratio
+low_prices_df['floor_area_ratio'] = low_prices_df['sqft_living'] / low_prices_df['sqft_lot']
+
+# bedroom - bathroom ratio
+low_prices_df['bedroom_bathroom_ratio'] = low_prices_df['bathrooms'] / low_prices_df['bedrooms']
+
+high_prices_df['average_room_size'] = high_prices_df['sqft_living'] / (high_prices_df['bathrooms'] + high_prices_df['bedrooms'])
+high_prices_df['floor_area_ratio'] = high_prices_df['sqft_living'] / high_prices_df['sqft_lot']
+high_prices_df['bedroom_bathroom_ratio'] = high_prices_df['bathrooms'] / high_prices_df['bedrooms']
+```
 
 #### Web scraped data from [UnitedStatesZipcodes](www.UnitedStatesZipCodes.org)
 
 
-Once the data had been prepared, the dataset was split into 2 parts. One part holds property values below **$1mil** and the rest is everything above that value.
-This was done to make the price distributions for both of the target variables normally distributed.
 
 
 ## Modelling
