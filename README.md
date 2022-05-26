@@ -2,7 +2,7 @@
 ![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/readme_image.png)
 
 ## Table of Contents
-- <a href="#overview">Overview</a>
+- <a href="#business-case">Business Case</a>
 - <a href="#requirements">Requirements</a>
 - <a href="#installation">Installation</a>
 - <a href="#demo-and-usage">Demo and Usage</a>
@@ -10,10 +10,9 @@
 - <a href="#exploratory-data-analysis">Exploratory Data Analysis</a>
 - <a href="#modelling">Modelling</a>
 - <a href="#model-performance">Model Performance</a>
-- <a href="#limitations">Limitations</a>
 - <a href="#conclusion">Conclusion</a>
 
-## Overview
+## Business Case
 This aim of this project is to utilize **regression algorithms** to predict final house sale prices in King County in Washington State. The project is from the perspective of being hypothetically commissioned by a local realty company in Seattle to produce a model to accurately predict sale prices. 
 <br><br>
 For the project, both a **predictive model** and **inferential model** have been created. Our inferential model aims to answer the question, <br>
