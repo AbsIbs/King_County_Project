@@ -147,7 +147,7 @@ Whilst the low house prices did not perform too well, the high house prices mode
 These results will focus on the performance of our superior **low house prices models**.
 ![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/predictive_model_results.png)
 <br><br>
-![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/inferential_model_results.png)
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/inferential_results.png)
 
 With regards to our inferential models, the main findings were,
 - for every 1% increase in average income in the area, the price of the house increases by 0.38%
