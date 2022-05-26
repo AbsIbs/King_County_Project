@@ -104,21 +104,53 @@ To record our model performance, we'll use 2 metrics:
 - **RMSE**
 
 ### **Predictive Modelling**
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/predictive_models.png)
+**Low house prices summary**
+<br>
+|                Regressor 	|     R2 	|   RMSE 	|
+|-------------------------:	|-------:	|-------:	|
+| Histogram_Gradient_Boost 	|  0.852 	|  73800 	|
+|            Random_Forest 	|  0.846 	|  75400 	|
+|           Gradient_Boost 	|  0.838 	|  77400 	|
+|        Linear_Regression 	|  0.795 	|  87000 	|
+|          Dummy Regressor 	| -0.000 	| 192200 	|
 
 
-
-
-
+**High house prices summary**
+|                Regressor 	|     R2 	|   RMSE 	|
+|-------------------------:	|-------:	|-------:	|
+|            Random_Forest 	|  0.337 	| 284800 	|
+|           Gradient_Boost 	|  0.287 	| 293300 	|
+| Histogram_Gradient_Boost 	|  0.263 	| 297600 	|
+|        Linear_Regression 	|  0.222 	| 307600 	|
+|          Dummy Regressor 	| -0.004 	| 354200 	|
+Interestingly, we can see a clear disparity in performance between our 2 sets of models. The poor performance from our high house price predictive models may be due to lack of clear correlations between features and price as well as lack of data.
 
 
 ### **Inferential Modelling**
+- For our inferential models, adhering to the assumptions of linear regression becomes critical.
+- A crucial rule when conducting inferential modelling revolves around avoiding autocorrelation between features. As such, our feature count is heavily cut. 
+- In addition to this, the features used were categorical features and the logged continuous features.
+- Rather than price as the target variable, our inferential model used **log price** as the target.
 
+|                   	|     R2 	| RMSE 	|
+|------------------:	|-------:	|-----:	|
+| Low house prices 	|   0.56 	| 0.24 	|
+| High house prices 	| -4.482 	| 0.22 	|
 
-
+Whilst the low house prices did not perform too well, the high house prices model performed terribly. Again, this may be due to the reasons mentioned above.
 
 ## Results
+These results will focus on the performance of our superior **low house prices models**.
+
+
+
 
 ## Limitations
+
+
+
+
 
 ## Conclusion
 
