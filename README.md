@@ -103,24 +103,17 @@ To record our model performance, we'll use 2 metrics:
 - **R2**
 - **RMSE**
 
-### Low Housing Prices (=< $1mil)
-#### **Predictive Modelling**
-
-
-
-#### **Inferential Modelling**
+### **Predictive Modelling**
 
 
 
 
 
-### High Housing Prices (> $1mil)
-#### **Inferential Modelling**
 
 
+### **Inferential Modelling**
 
 
-#### **Predictive Modelling** 
 
 
 ## Results
