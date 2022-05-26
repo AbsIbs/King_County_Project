@@ -16,7 +16,8 @@
 ## Overview
 This aim of this project is to utilize **regression algorithms** to predict final house sale prices in King County in Washington State. The project is from the perspective of being hypothetically commissioned by a local realty company in Seattle to produce a model to accurately predict sale prices. 
 <br><br>
-For the project, both a **predictive model** and **inferential model** have been created.
+For the project, both a **predictive model** and **inferential model** have been created. Our inferential model aims to answer the question, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**"How much does a predictor affect price? If we raise the value of the predictor, how will price change?"**
 
 ## Requirements
 This project assumes you already have these system dependencies set up:
@@ -105,6 +106,7 @@ To record our model performance, we'll use 2 metrics:
 
 ### **Predictive Modelling**
 ![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/predictive_models.png)
+<br><br>
 **Low house prices summary**
 <br>
 |                Regressor 	|     R2 	|   RMSE 	|
@@ -115,8 +117,8 @@ To record our model performance, we'll use 2 metrics:
 |        Linear_Regression 	|  0.795 	|  87000 	|
 |          Dummy Regressor 	| -0.000 	| 192200 	|
 
-
 **High house prices summary**
+<br>
 |                Regressor 	|     R2 	|   RMSE 	|
 |-------------------------:	|-------:	|-------:	|
 |            Random_Forest 	|  0.337 	| 284800 	|
@@ -124,8 +126,9 @@ To record our model performance, we'll use 2 metrics:
 | Histogram_Gradient_Boost 	|  0.263 	| 297600 	|
 |        Linear_Regression 	|  0.222 	| 307600 	|
 |          Dummy Regressor 	| -0.004 	| 354200 	|
-Interestingly, we can see a clear disparity in performance between our 2 sets of models. The poor performance from our high house price predictive models may be due to lack of clear correlations between features and price as well as lack of data.
 
+<br>
+Interestingly, we can see a clear disparity in performance between our 2 sets of models. The poor performance from our high house price predictive models may be due to lack of clear correlations between features and price as well as lack of data.
 
 ### **Inferential Modelling**
 - For our inferential models, adhering to the assumptions of linear regression becomes critical.
@@ -142,18 +145,19 @@ Whilst the low house prices did not perform too well, the high house prices mode
 
 ## Results
 These results will focus on the performance of our superior **low house prices models**.
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/predictive_model_results.png)
+<br><br>
+![image](https://github.com/AbsIbs/King_County_Project/raw/main/images/inferential_model_results.png)
 
-
-
-
-## Limitations
-
-
-
-
+With regards to our inferential models, the main findings were,
+- for every 1% increase in average income in the area, the price of the house increases by 0.38%
+- for every 1% increase in the average room size, the price of the house increases by 0.54%
+- for every 1% increase in the distance from Redmond, the price of the house decreases by 0.16%
 
 ## Conclusion
-
+Our predictive model and inferential model seem to be usable for house prices up to $1mil however, unusable for more expensive houses. Our inferential model shows that the average income of the area, distance from redmond and average room size affect house prices the most.
+<br><br>
+For future studies, it is advised to retrieve a significantly larger amount of data for houses above the $1mil mark in order to train more accurate models.
 
 
 
